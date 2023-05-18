@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html id="html" class="" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Members List</title>
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+    </style>
+    
+</head>
+<body class="bg-[#fafafa] dark:bg-[#17181c] h-screen">
+    <section class="flex max-w-[1920px] mx-auto">
+
+        <aside class="bg-[#f6f8fc] dark:bg-[#1E1F23] w-[25%] h-screen overflow-hidden max-w-[350px] shadow-lg">
+            <section class="px-8">
+                <!-- logo  -->
+                <article class="text-4xl text-blue-500 font-bold mt-9 text-center">
+                    <a href="../index.html">
+                        Kuloal
+                    </a>
+                </article>
+                <!--  -->
+                <article class="mt-16">
+                
+                    <!-- Group Chat  -->
+                    <a href="./group_chat.html" class="dark:bg-[#27282f] dark:hover:bg-slate-700  dark:border-slate-700 dark:hover:border-blue-500 dark:text-slate-300 hover:bg-slate-100 hover:text-blue-500 duration-300 w-full border border-slate-300 rounded-2xl text-slate-700 shadow-lg px-5 py-3 flex items-center justify-center gap-x-4">
+                        <div class="w-14 h-14 overflow-hidden rounded-full shadow-xl">
+                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                        </div>
+                        <h1 class="text-lg ">Group Chat</h1>
+                        <div class="w-4 h-4 bg-green-500 shadow-green-500 shadow-md rounded-full mb-5"></div>
+                    </a>
+                
+                
+
+                    <!-- Notification  -->
+                    <a href="./notification.html" class="dark:bg-[#27282f] dark:hover:bg-slate-700  dark:border-slate-700 dark:hover:border-blue-500 dark:text-slate-300 hover:bg-slate-100 hover:text-blue-500 duration-300 w-full mt-8 border border-slate-300 rounded-2xl text-slate-700 shadow-lg px-5 py-3 flex items-center ">
+                        <svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M21 6.5c0 1.93-1.57 3.5-3.5 3.5S14 8.43 14 6.5S15.57 3 17.5 3S21 4.57 21 6.5m-2 5.29c-.5.13-1 .21-1.5.21A5.51 5.51 0 0 1 12 6.5c0-1.47.58-2.8 1.5-3.79A1.93 1.93 0 0 0 12 2c-1.1 0-2 .9-2 2v.29C7.03 5.17 5 7.9 5 11v6l-2 2v1h18v-1l-2-2v-5.21M12 23c1.11 0 2-.89 2-2h-4a2 2 0 0 0 2 2Z"/></svg>
+                        <h1 class="text-lg ms-4">Notification</h1>
+                    </a>
+                
+                    <!-- Members  -->
+                    <a href="./members_list.html" class="dark:bg-[#27282f] dark:hover:bg-slate-700  dark:border-slate-700 dark:hover:border-blue-500 dark:text-slate-300 hover:bg-slate-100 hover:text-blue-500 duration-300 w-full mt-8 border border-slate-300 rounded-2xl text-slate-700 shadow-lg px-5 py-3 flex items-center ">
+                        <svg class="ms-3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12 5a3.5 3.5 0 0 0-3.5 3.5A3.5 3.5 0 0 0 12 12a3.5 3.5 0 0 0 3.5-3.5A3.5 3.5 0 0 0 12 5m0 2a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 10a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 7M5.5 8A2.5 2.5 0 0 0 3 10.5c0 .94.53 1.75 1.29 2.18c.36.2.77.32 1.21.32c.44 0 .85-.12 1.21-.32c.37-.21.68-.51.91-.87A5.42 5.42 0 0 1 6.5 8.5v-.28c-.3-.14-.64-.22-1-.22m13 0c-.36 0-.7.08-1 .22v.28c0 1.2-.39 2.36-1.12 3.31c.12.19.25.34.4.49a2.482 2.482 0 0 0 1.72.7c.44 0 .85-.12 1.21-.32c.76-.43 1.29-1.24 1.29-2.18A2.5 2.5 0 0 0 18.5 8M12 14c-2.34 0-7 1.17-7 3.5V19h14v-1.5c0-2.33-4.66-3.5-7-3.5m-7.29.55C2.78 14.78 0 15.76 0 17.5V19h3v-1.93c0-1.01.69-1.85 1.71-2.52m14.58 0c1.02.67 1.71 1.51 1.71 2.52V19h3v-1.5c0-1.74-2.78-2.72-4.71-2.95M12 16c1.53 0 3.24.5 4.23 1H7.77c.99-.5 2.7-1 4.23-1Z"/></svg>
+                        <h1 class="text-lg ms-4">Members</h1>
+                    </a>
+
+                    <!-- Feeling Category  -->
+                    <a href="./feeling.html" class="dark:bg-[#27282f] dark:hover:bg-slate-700  dark:border-slate-700 dark:hover:border-blue-500 dark:text-slate-300 hover:bg-slate-100 hover:text-blue-500 duration-300 w-full mt-8 border border-slate-300 rounded-2xl text-slate-700 shadow-lg px-5 py-3 flex items-center ">
+                        <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="currentColor"><path d="M16 10.5c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5s.448-1.5 1-1.5s1 .672 1 1.5Zm-6 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S8.448 9 9 9s1 .672 1 1.5Z"/><path fill-rule="evenodd" d="M11.943 1.25h.114c2.309 0 4.118 0 5.53.19c1.444.194 2.584.6 3.479 1.494c.895.895 1.3 2.035 1.494 3.48c.19 1.411.19 3.22.19 5.529V15A7.75 7.75 0 0 1 15 22.75h-3.057c-2.309 0-4.118 0-5.53-.19c-1.444-.194-2.584-.6-3.479-1.494c-.895-.895-1.3-2.035-1.494-3.48c-.19-1.411-.19-3.22-.19-5.529v-.114c0-2.309 0-4.118.19-5.53c.194-1.444.6-2.584 1.494-3.479c.895-.895 2.035-1.3 3.48-1.494c1.411-.19 3.22-.19 5.529-.19Zm-5.33 1.676c-1.278.172-2.049.5-2.618 1.069c-.57.57-.897 1.34-1.069 2.619c-.174 1.3-.176 3.008-.176 5.386s.002 4.086.176 5.386c.172 1.279.5 2.05 1.069 2.62c.57.569 1.34.896 2.619 1.068c1.3.174 3.008.176 5.386.176h2.25c.004-1.366.034-2.264.281-3.027a5.75 5.75 0 0 1 .741-1.496A5.755 5.755 0 0 1 12 17.75a5.766 5.766 0 0 1-3.447-1.148a.75.75 0 1 1 .894-1.204c.728.54 1.607.852 2.553.852s1.825-.313 2.553-.852a.75.75 0 0 1 1.183.744a5.749 5.749 0 0 1 2.487-1.61c.763-.248 1.66-.278 3.027-.282V12c0-2.378-.002-4.086-.176-5.386c-.172-1.279-.5-2.05-1.069-2.62c-.57-.569-1.34-.896-2.619-1.068c-1.3-.174-3.008-.176-5.386-.176s-4.086.002-5.386.176Zm14.592 12.825c-1.357.006-1.999.038-2.518.207a4.25 4.25 0 0 0-2.729 2.729c-.169.52-.2 1.161-.207 2.518a6.253 6.253 0 0 0 5.454-5.454Z" clip-rule="evenodd"/></g></svg>
+                        <h1 class="text-lg ms-4">Feeling</h1>
+                    </a>
+
+                    <!-- Activities  -->
+                    <a href="./activities.html" class="dark:bg-[#27282f] dark:hover:bg-slate-700  dark:border-slate-700 dark:hover:border-blue-500 dark:text-slate-300 hover:bg-slate-100 hover:text-blue-500 duration-300 w-full mt-8 border border-slate-300 rounded-2xl text-slate-700 shadow-lg px-5 py-3 flex items-center ">
+                        <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12h4l3-9l4 18l3-9h4"/></svg>
+                        <h1 class="text-lg ms-4">Activities</h1>
+                    </a>
+
+
+                </article>
+
+
+            </section>
+        </aside>
+
+        <main class="w-full">
+            <div class="relative">
+                <header class="border border-l-slate-200 dark:border-slate-700 py-5 px-8 shadow-lg bg-[#f6f8fc] dark:bg-[#1E1F23] flex justify-between items-center">
+                    <!-- left nav  -->
+                    <div class="text-slate-700 dark:text-slate-300 text-2xl font-bold flex items-center">
+                        <svg class="" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="currentColor" d="M4 21V9l8-6l8 6v12h-6v-7h-4v7H4Z"/></svg>
+                        <span class="ms-2 mt-1">Home</span>
+                    </div>
+                    <!--  -->
+                    <!-- right nav  -->
+                    <div class="text-slate-700 dark:text-slate-300 flex items-center gap-x-6">
+                        <!-- dark mode btn  -->
+                        <button onclick="toggleTheme()" id="darkBtn"  class="cursor-pointer">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 256 256"><path fill="currentColor" d="M116 32V16a12 12 0 0 1 24 0v16a12 12 0 0 1-24 0Zm80 96a68 68 0 1 1-68-68a68.07 68.07 0 0 1 68 68Zm-24 0a44 44 0 1 0-44 44a44.05 44.05 0 0 0 44-44ZM51.51 68.49a12 12 0 1 0 17-17l-12-12a12 12 0 0 0-17 17Zm0 119l-12 12a12 12 0 0 0 17 17l12-12a12 12 0 1 0-17-17ZM196 72a12 12 0 0 0 8.49-3.51l12-12a12 12 0 0 0-17-17l-12 12A12 12 0 0 0 196 72Zm8.49 115.51a12 12 0 0 0-17 17l12 12a12 12 0 0 0 17-17ZM44 128a12 12 0 0 0-12-12H16a12 12 0 0 0 0 24h16a12 12 0 0 0 12-12Zm84 84a12 12 0 0 0-12 12v16a12 12 0 0 0 24 0v-16a12 12 0 0 0-12-12Zm112-96h-16a12 12 0 0 0 0 24h16a12 12 0 0 0 0-24Z"/></svg>    
+                        </button>
+                        <!-- message icon  -->
+                        <div class="">
+                            <a href="./direct_message.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                            </a>
+                        </div>
+                        <div onclick="show('accountModal')" class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <!--  -->
+                </header>
+
+                <!-- account modal  -->
+                <div id="accountModal" class="opacity-0 pointer-events-none duration-500 dark:brightness-90">
+                    <div class="w-10 h-10 absolute right-12 rotate-45 bg-blue-400 "></div>
+
+                
+                    <div class="absolute right-8 flex justify-end bg-blue-400 text-white rounded-xl overflow-hidden ">
+                        <div class="shadow-lg py-3 ">
+                            <a href="./profile_detail.html" class="flex items-center gap-x-2 text-xl px-10 py-2 hover:bg-blue-500 duration-300" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path stroke="currentColor" stroke-width="1.5" d="M21 12a8.958 8.958 0 0 1-1.526 5.016A8.991 8.991 0 0 1 12 21a8.991 8.991 0 0 1-7.474-3.984A9 9 0 1 1 21 12Z"/><path fill="currentColor" d="M13.25 9c0 .69-.56 1.25-1.25 1.25v1.5A2.75 2.75 0 0 0 14.75 9h-1.5ZM12 10.25c-.69 0-1.25-.56-1.25-1.25h-1.5A2.75 2.75 0 0 0 12 11.75v-1.5ZM10.75 9c0-.69.56-1.25 1.25-1.25v-1.5A2.75 2.75 0 0 0 9.25 9h1.5ZM12 7.75c.69 0 1.25.56 1.25 1.25h1.5A2.75 2.75 0 0 0 12 6.25v1.5ZM5.166 17.856l-.719-.214l-.117.392l.267.31l.569-.488Zm13.668 0l.57.489l.266-.31l-.117-.393l-.719.214ZM9 15.75h6v-1.5H9v1.5Zm0-1.5a4.752 4.752 0 0 0-4.553 3.392l1.438.428A3.252 3.252 0 0 1 9 15.75v-1.5Zm3 6a8.23 8.23 0 0 1-6.265-2.882l-1.138.977A9.73 9.73 0 0 0 12 21.75v-1.5Zm3-4.5c1.47 0 2.715.978 3.115 2.32l1.438-.428A4.752 4.752 0 0 0 15 14.25v1.5Zm3.265 1.618A8.23 8.23 0 0 1 12 20.25v1.5a9.73 9.73 0 0 0 7.403-3.405l-1.138-.977Z"/></g></svg>
+                                <span>
+                                    Profile
+                                </span>
+                            </a>
+                            <a class="flex items-center gap-x-2 text-xl px-10 py-2 hover:bg-blue-500 duration-300" href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6 22q-.825 0-1.413-.588T4 20V10q0-.825.588-1.413T6 8h1V6q0-2.075 1.463-3.538T12 1q2.075 0 3.538 1.463T17 6v2h1q.825 0 1.413.588T20 10v10q0 .825-.588 1.413T18 22H6Zm0-2h12V10H6v10Zm6-3q.825 0 1.413-.588T14 15q0-.825-.588-1.413T12 13q-.825 0-1.413.588T10 15q0 .825.588 1.413T12 17ZM9 8h6V6q0-1.25-.875-2.125T12 3q-1.25 0-2.125.875T9 6v2ZM6 20V10v10Z"/></svg>
+                                <span>
+                                    Password
+                                </span>
+                            </a>
+                            <a class="flex items-center gap-x-2 text-xl px-10 py-2 hover:bg-blue-500 duration-300" href="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 8V6a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2v-2"/><path d="M15 12H3l3-3m0 6l-3-3"/></g></svg>
+                                <span>
+                                    Logout
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+
+
+            <section class="flex justify-between mt-10">
+                <!-- Content  -->
+                <article  class=" w-[70%] mx-auto ">
+
+                    <!-- grid and row btns and search bar  -->
+                    <div class="max-w-[900px] mx-auto flex justify-between gap-x-2">
+                        <div class="flex items-center gap-x-2">
+                            <input class="border dark:bg-[#27282F] dark:border-slate-700 focus:outline-none border-blue-300/50 px-5 py-2 text-slate-700 bg-slate-50 shadow-lg rounded-xl  placeholder:text-slate-100" type="text" placeholder="Search...">
+                            <button title="Search" class="bg-blue-400 hover:bg-blue-500 duration-300 text-white w-10 h-10 flex justify-center items-center rounded-xl shadow-lg" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z"/></svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center gap-x-2">
+                            <h1 class="text-slate-600 text-lg dark:text-slate-200">Seen by </h1>
+                            <button onclick="toggleDisplayStyle()" id="gridDisplayBtn" class="text-white bg-violet-400 duration-300 hover:bg-violet-500 w-10 h-10 flex justify-center items-center shadow-lg rounded-lg" title="Seen by grids..">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 2h-19a.5.5 0 0 0-.5.5v19a.5.5 0 0 0 .5.5h19a.5.5 0 0 0 .5-.5v-19a.5.5 0 0 0-.5-.5zm-13 19H3V3h5.5v18zm6 0h-5V3h5v18zm6.5 0h-5.5V3H21v18z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Members List Section -->
+                    <div class="mt-10 max-w-[900px] dark:bg-[#1E1F23] border-2 border-blue-300/20 dark:border-slate-700  mx-auto overflow-hidden  rounded-2xl shadow-lg ">
+
+                        <!-- user list row style -->
+                        <div id="rowDisplay" class="bg-[#f6f8fc] dark:bg-[#1E1F23] h-[700px] overflow-y-scroll p-10 flex flex-col gap-y-5">
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="shadow-lg dark:shadow-slate-900 p-5 border border-blue-300/50 dark:border-slate-700 rounded-xl justify-between flex gap-x-3 items-center">
+                                <div class="flex gap-x-2 items-center">
+                                    <div class="">
+                                        <div class="w-16 cursor-pointer h-16 overflow-hidden rounded-full shadow-xl">
+                                            <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <h1 class="text-slate-700 ml-1 dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-x-1 ">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-x-6">
+                                    <div class="flex items-center gap-x-2">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                    <select class="focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--  -->
+
+                        <!-- user list with grid  -->
+                        <div id="gridDisplay" class="hidden bg-[#f6f8fc] dark:bg-[#1E1F23] h-[700px] overflow-y-scroll p-10  ">
+                           <div class="grid grid-cols-3 gap-8 w-full">
+
+                            <!-- card list  -->
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border dark:shadow-slate-900 bg-slate-50 dark:bg-[#1E1F23] dark:border-slate-700 border-blue-300/50 shadow-lg rounded-2xl text-center pt-5 p-8">
+                                <div class="flex justify-center">
+                                    <div class="w-32 h-32 border-4 border-[#f6f8fc] dark:border-slate-500 cursor-pointer  overflow-hidden rounded-full shadow-md">
+                                        <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="mt-5">
+                                    <div class="">
+                                        <h1 class="text-slate-700 text-lg dark:text-slate-200">
+                                            Hpone Pyae Sone
+                                        </h1>
+                                        <h2 class="text-slate-500 dark:text-slate-300 text-sm flex items-center gap-x-1 justify-center text-center">
+                                            <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5a2.5 2.5 0 0 1 0 5z"/></svg>
+                                            Bogalay
+                                        </h2>
+                                    </div>
+                                    <select class="mt-4 focus:outline-none focus:bg-blue-500 bg-blue-400 text-white px-3 py-1 rounded-xl shadow-lg text-sm" name="" id="">
+                                        <option value="admin">Admin</option>
+                                        <option value="member" selected>Member</option>
+                                    </select>
+                                    <div class="flex justify-center items-center gap-x-3 mt-5">
+                                        <button  class="text-white bg-blue-400 hover:bg-blue-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Profile">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg>
+                                        </button>
+                                        <button  class="text-white bg-violet-400 hover:bg-violet-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" title="Message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H5.2L4 17.2V4h16v12m-3-5h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2"/></svg>
+                                        </button>
+                                        <button class="text-white bg-red-400 hover:bg-red-500 duration-300 rounded-full w-9 h-9 flex justify-center items-center shadow-md" type="button" title="Delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9M7 6h10v13H7V6m2 2v9h2V8H9m4 0v9h2V8h-2Z"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                           </div>
+                        </div>
+
+                        
+                       
+                    </div>
+                
+                </article>
+
+                <!-- Noti Alert  -->
+                <article class=" w-[25%]  max-w-[350px] mr-10 ">
+                    <!-- Admin  -->
+                    <div class="bg-[#f6f8fc] dark:bg-[#1E1F23] border border-slate-300 dark:border-slate-700 rounded-2xl shadow-lg p-8">
+                        <h1 class="text-slate-800 dark:text-slate-200 text-xl font-medium">
+                            Admin
+                        </h1>
+                        <div class="flex items-center gap-x-5 mt-3">
+                            <div class="w-14 h-14 overflow-hidden rounded-full shadow-xl">
+                                <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                            </div>
+                            <div class="">
+                                <h1 class="text-slate-700 font-semibold dark:text-slate-200 text-lg">Haru</h1>
+                                <h2 class="text-md dark:text-slate-400">
+                                    Bogalay
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New Members  -->
+                    <div class="bg-[#f6f8fc] dark:bg-[#1E1F23] border border-slate-300 dark:border-slate-700 rounded-2xl shadow-lg p-8 mt-8">
+                        <h1 class="text-slate-800 dark:text-slate-200 text-xl font-medium">
+                            New Members
+                        </h1>
+                        <div class="flex items-center gap-x-5 mt-6">
+                            <div class="w-14 h-14 overflow-hidden rounded-full shadow-xl">
+                                <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                            </div>
+                            <div class="">
+                                <h1 class="text-slate-700 font-semibold dark:text-slate-200 text-lg">Haru</h1>
+                                <h2 class="text-md dark:text-slate-400">
+                                    Bogalay
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-x-5 mt-5">
+                            <div class="w-14 h-14 overflow-hidden rounded-full shadow-xl">
+                                <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                            </div>
+                            <div class="">
+                                <h1 class="text-slate-700 font-semibold dark:text-slate-200 text-lg">Haru</h1>
+                                <h2 class="text-md dark:text-slate-400">
+                                    Bogalay
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-x-5 mt-5">
+                            <div class="w-14 h-14 overflow-hidden rounded-full shadow-xl">
+                                <img src="https://portfolio-haru2004github.vercel.app/dist/img/Me.jpg" alt="">
+                            </div>
+                            <div class="">
+                                <h1 class="text-slate-700 font-semibold dark:text-slate-200 text-lg">Haru</h1>
+                                <h2 class="text-md dark:text-slate-400">
+                                    Bogalay
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </article>
+            </section>
+        </main>   
+    </section>
+    
+</body>
+<script src="./darkMode.js"></script>
+
+<script>
+
+    function showModal(modalName){
+        document.getElementById(modalName).classList.toggle('opacity-100')
+        document.getElementById(modalName).classList.toggle('pointer-events-auto')
+    }
+
+</script>
+
+<script>
+    //change Display Style
+
+    /// for User list Display mode
+    const gridDisplay = document.querySelector("#gridDisplay")
+    const rowDisplay = document.querySelector("#rowDisplay")
+    const gridDisplayBtn = document.querySelector("#gridDisplayBtn")
+
+    let grid = false;
+
+    // Switch theme function
+    const toggleDisplayStyle= () => {
+        grid = !grid
+        switchDisplay()
+    }
+
+    const toGrid= () => {
+        localStorage.setItem('data-display','grid')
+        gridDisplay.classList.remove('hidden')
+        gridDisplay.classList.add('block')
+        rowDisplay.classList.remove('block')
+        rowDisplay.classList.add('hidden')
+        gridDisplayBtn.title = "Seen By Grids"
+        gridDisplayBtn.innerHTML=`
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 2h-19a.5.5 0 0 0-.5.5v19a.5.5 0 0 0 .5.5h19a.5.5 0 0 0 .5-.5v-19a.5.5 0 0 0-.5-.5zm-13 19H3V3h5.5v18zm6 0h-5V3h5v18zm6.5 0h-5.5V3H21v18z"/></svg>`
+
+    }
+
+    const toRow= () => {
+        localStorage.removeItem('data-display')
+        rowDisplay.classList.remove('hidden')
+        rowDisplay.classList.add('block')
+        gridDisplay.classList.remove('block')
+        gridDisplay.classList.add('hidden')
+        gridDisplayBtn.title = "Seen By Rows"
+        gridDisplayBtn.innerHTML=`
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 15.5V13h18v2.5H3ZM3 11V8.5h18V11H3Zm0-4.5V4h18v2.5H3ZM3 20v-2.5h18V20H3Z"/></svg>
+        `
+
+    }
+
+    const switchDisplay = () => {
+        grid ? toGrid() : toRow()
+    }
+
+    const dataDisplay = localStorage.getItem('data-display')
+
+    dataDisplay === 'grid' ? toGrid() : toRow();
+
+
+    // 
+
+</script>
+
+</html>
